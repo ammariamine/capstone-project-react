@@ -1,6 +1,8 @@
 import React from "react";
 import "./LandingPage.css";
+import Navbar from "../Navbar/Navbar";
 const Landing_Page = () => {
+<Navbar/>
   return (
     <section className="hero-section">
       <div>
