@@ -16,6 +16,7 @@ function App() {
             <Route exact path="/" Component={Landing_Page} />
             <Route path="/singup" Component={Sign_Up} />
             <Route path="/login" Component={Login} />
+            <Route path="/instant-consultation" element={<InstantConsultation />} />
             </Routes>
          </switch>
         </BrowserRouter>
