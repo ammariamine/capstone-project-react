@@ -1,5 +1,7 @@
 import React from 'react';
 import "./Navbar.css" ;
+import { Link } from 'react-router-dom';
+
 const Navbar = () => {
     return(
         <div>
@@ -27,7 +29,7 @@ const Navbar = () => {
               </a>
               <span>.</span>
             </div>
-            <div className="nav__icon" onclick="{handleClick}">
+            <div className="nav__icon" onClick="{handleClick}">
               <i className="fa fa-times fa fa-bars" />
             </div>
             <ul className="nav__links active">
@@ -37,16 +39,18 @@ const Navbar = () => {
               <li className="link">
                 <a href="#">Appointments</a>
               </li>
-              <li className="link">
-                <a href="../Sign_Up//Sign_Up.html">
-                  <button className="btn1">Sign Up</button>
-                </a>
+              <li className="link" >
+              <Link to= "/signup">
+                  <button className="btn1" >Sign Up</button>
+                </Link>
               </li>
+              
               <li className="link">
-                <a href="../Login/Login.html">
-                  <button className="btn1">Login</button>
-                </a>
+                <Link to= "/login">
+                  <button className="btn1" >Login</button>
+                </Link>
               </li>
+              
             </ul>
           </nav>
         </div>

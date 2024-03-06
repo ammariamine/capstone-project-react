@@ -1,6 +1,5 @@
 import React from "react";
 import "./LandingPage.css";
-
 const Landing_Page = () => {
   return (
     <section className="hero-section">
