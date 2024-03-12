@@ -13,6 +13,7 @@ const Sign_Up = () => {
     const navigate = useNavigate();
 
     const register = async (e) => {
+        
         e.preventDefault();
 
         // API Call
@@ -51,12 +52,13 @@ const Sign_Up = () => {
             }
         }
     };
+    
 
     return (
         <div className="container" style={{marginTop:'5%'}}>
         <div className="signup-grid">
         <div className="signup-form">
-         <form method="POST" onSubmit={register}>
+         <form method="POST">
            <div className="form-group">
                 <label htmlFor="email">Email</label>
                  <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" name="email" id="email" className="form-control" placeholder="Enter your email" aria-describedby="helpId" />
@@ -80,7 +82,7 @@ const Sign_Up = () => {
   <button
     type="submit"
     className="btn btn-primary mb-2 mr-1 waves-effect waves-light"
-  onClick={async () => {await register();}}
+    onClick={async (e) => {await register(e);}}
   >
     Submit
   </button>
@@ -88,7 +90,6 @@ const Sign_Up = () => {
     Reset
   </button>
 </div>
-
          </form>
          </div>
          </div>
